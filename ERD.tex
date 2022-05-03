@@ -1,0 +1,17 @@
+\documentclass[]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\usetikzlibrary{er,positioning}
+\begin{document}
+	\begin{tikzpicture}[auto,node distance=1.5cm]
+		 \node[entity] (n1) {recipe}
+    		[grow=up,sibling distance=3cm]
+   				child {node[attribute] {creation timestamp}}
+    			child {node[attribute] {name}}
+    			child {node[attribute] {creator}};
+	\end{tikzpicture}
+\end{document}
