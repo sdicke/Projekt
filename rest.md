@@ -49,7 +49,7 @@
 * End point: /recipe/title/$ID
 * * Method: GET
 * * Request MIME: (none)
-* * Response MIME: text/plain
+* * Response MIME: application/json
 * * Status codes:  
 
 * End point: /recipe/title/$ID
@@ -60,7 +60,7 @@
 
 * End point: /recipe/$ID
 * * Method: PUT
-* * Request MIME: text/plain
+* * Request MIME: application/json
 * * Response MIME: (none)
 * * Status codes:
 
@@ -89,7 +89,7 @@
 * End point: /recipe/title/$ID
 * * Method: GET
 * * Request MIME: (none)
-* * Response MIME: text/plain
+* * Response MIME: application/json
 * * Status codes:  
 
 * End point: /recipe/title/$ID
@@ -100,7 +100,7 @@
 
 * End point: /recipe/$ID
 * * Method: PUT
-* * Request MIME: text/plain
+* * Request MIME: application/json
 * * Response MIME: (none)
 * * Status codes:
 
@@ -109,7 +109,7 @@
 * End point: /recipe/title/$ID
 * * Method: GET
 * * Request MIME: (none)
-* * Response MIME: text/plain
+* * Response MIME: application/json
 * * Status codes:  
 
 * End point: /recipe/title/$ID
@@ -120,6 +120,6 @@
 
 * End point: /recipe/$ID
 * * Method: PUT
-* * Request MIME: text/plain
+* * Request MIME: application/json
 * * Response MIME: (none)
 * * Status codes:
