@@ -54,9 +54,9 @@
 * * Response MIME: (none)
 * * Status codes:
 
-# A specific recipe's ingrients
+# A specific recipe's ingredients
 
-* End point: /recipe/*ID*/ingrients
+* End point: /recipe/*ID*/ingredients
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
@@ -119,21 +119,21 @@
 
 # A specific recipe's additions
 
-* End point: /recipe/*ID*/addtion/_all
+* End point: /recipe/*ID*/addition/_all
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
 * * Response JSON type: E
 * * Status codes: 
 
-* End point: /recipe/*ID*/addtion/*AID*
+* End point: /recipe/*ID*/addition/*AID*
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
 * * * Response JSON type: F
 * * Status codes:  
 
-* End point: /recipe/*ID*/additon/*AID*
+* End point: /recipe/*ID*/addition/*AID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
@@ -194,7 +194,7 @@ Here are the JSON types mentions above. In the round brackets there are the resp
 ## Type E
 
 {
-    additons: [(number)]
+    additions: [(number)]
 }
 
 ## Type F
@@ -233,7 +233,7 @@ This type is identical to type H.
 
 # Values for the end point /recipe/*ID*/addition/*AID*/state
 
-The admissible values for are:
+The admissible values for these are:
 * unchecked
 * checked
 
