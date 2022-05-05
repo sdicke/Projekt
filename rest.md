@@ -15,9 +15,10 @@
 # A specific recipe
 
 * End point: /recipe/*ID*
-* * Method: HEAD
+* * Method: GET
 * * Request MIME: (none)
 * * Response MIME: (none)
+* * Response JSON type: X
 * * Status codes:  
 
 * End point: /recipe/*ID*
@@ -215,6 +216,14 @@ This type is identical to type H.
     "owner": (string),
     "creator": (string),
     "state": (string, values: ["new", "unchecked", "checked"])
+}
+
+## Type X
+
+{
+    "id": (number),
+    "creator": (string),
+    "created": (string, date and time),
 }
 
 # Keys for the end point: /recipe/*ID*
