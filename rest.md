@@ -59,7 +59,7 @@
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
-*  * Response JSON type: D
+*  * Response JSON type: B
 * * Status codes:  
 
 * End point: /recipe/*ID*/ingredients
@@ -71,7 +71,7 @@
 * End point: /recipe/*ID*/ingredients
 * * Method: PUT
 * * Request MIME: application/json
-*  * Response JSON type: E
+*  * Response JSON type: C
 * * Response MIME: (none)
 * * Status codes:
 
@@ -101,7 +101,7 @@
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
-* * Response JSON type: F
+* * Response JSON type: D
 * * Status codes:  
 
 * End point: /recipe/*ID*/categories/*CID*
@@ -122,14 +122,14 @@
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
-* * Response JSON type: G
+* * Response JSON type: E
 * * Status codes: 
 
 * End point: /recipe/*ID*/addtion/*AID*
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
-* * * Response JSON type: H
+* * * Response JSON type: F
 * * Status codes:  
 
 * End point: /recipe/*ID*/additon/*AID*
@@ -141,7 +141,7 @@
 * End point: /recipe/*ID*/addition/*AID*
 * * Method: PUT
 * * Request MIME: application/json
-* * Request JSON type: J
+* * Request JSON type: G
 * * Response MIME: (none)
 * * Status codes:
 
@@ -165,28 +165,16 @@ Here are the JSON types mentions above. In the round brackets there are the resp
 ## Type B
 
 {
-    
+    "ingredients" : [(string)]
 }
 
 ## Type C
 
 {
-    
-}
-
-## Type D
-
-{
-    "ingredients" : [(string)]
-}
-
-## Type E
-
-{
     "ingredients": [(string)]
 }
 
-## Type F
+## Type D
 
 {
     "categories" : [
@@ -197,13 +185,13 @@ Here are the JSON types mentions above. In the round brackets there are the resp
                               ]
 }
 
-## Type G
+## Type E
 
 {
     additons: [(number)]
 }
 
-## Type H
+## Type F
 
 {
    "id": (number), 
@@ -215,7 +203,7 @@ Here are the JSON types mentions above. In the round brackets there are the resp
     "state": (string, values: ["new", "unchecked", "checked"])
 }
 
-## Type I
+## Type G
 
 This type is identical to type H.
 
