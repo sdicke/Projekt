@@ -15,24 +15,23 @@
 # A specific recipe
 
 * End point: /recipe/*ID*
-* * Method: GET
+* * Method: HEAD
 * * Request MIME: (none)
-* * Response MIME: application/json
-*  * Response JSON type: B
+* * Response MIME: (none)
 * * Status codes:  
+
+* End point: /recipe/*ID*
+* * Method: POST
+* * Request MIME: application/x-www-form-urlencoded
+* * Request data: (See description below)
+* * Response MIME: (none)
+* * Status codes:
 
 * End point: /recipe/*ID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Status codes:  
-
-* End point: /recipe/*ID*
-* * Method: PUT
-* * Request MIME: application/json
-*  * Request JSON type: C
-* * Response MIME: (none)
-* * Status codes:
 
 # A specific recipe's title
 
@@ -229,6 +228,10 @@ This type is identical to type H.
     "creator": (string),
     "state": (string, values: ["new", "unchecked", "checked"])
 }
+
+# Keys for the end point: /recipe/*ID*
+
+* title
 
 # Keys for the endpoint /recipe/*ID*/addition/*AID*/
 
