@@ -60,7 +60,7 @@
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
-*  * Response JSON type: B
+* * Response JSON type: B
 * * Status codes:  
 
 * End point: /recipe/*ID*/ingredients
@@ -72,7 +72,7 @@
 * End point: /recipe/*ID*/ingredients
 * * Method: PUT
 * * Request MIME: application/json
-*  * Response JSON type: C
+* * Response JSON type: C
 * * Response MIME: (none)
 * * Status codes:
 
@@ -139,17 +139,22 @@
 * * Response MIME: (none)
 * * Status codes:  
 
-* End point: /recipe/*ID*/addition/*AID*
+* End point: /recipe/*ID*/addition/*AID*/owner
 * * Method: PUT
-* * Request MIME: application/json
-* * Request JSON type: G
+* * Request MIME: text/plain
+* * Response MIME: (none)
+* * Status codes:
+
+* End point: /recipe/*ID*/addition/*AID*/state
+* * Method: PUT
+* * Request MIME: text/plain
 * * Response MIME: (none)
 * * Status codes:
 
 * End point: /recipe/*ID*/addition/*AID*/
-* * Method: POST
-* * Request MIME: application/x-www-form-urlencoded
-* * Request data: (See description below)
+* * Method: PUT
+* * Request MIME: application/json
+* * Request JSON type: H
 * * Response MIME: (none)
 * * Status codes:
 
@@ -226,16 +231,12 @@ This type is identical to type H.
     "created": (string, date and time),
 }
 
+# Values for the end point /recipe/*ID*/addition/*AID*/state
+
+The admissible values for are:
+* unchecked
+* checked
+
 # Keys for the end point: /recipe/*ID*
 
 * title
-
-# Keys for the endpoint /recipe/*ID*/addition/*AID*/
-
-The available keys are:
-* owner
-* state
-
-The admissible values for state are:
-* unchecked
-* checked
