@@ -10,6 +10,15 @@
 * * Request MIME: (none)
 * * Response MIME: application/json
 * * Response JSON type: A
+* * Authentication required: no
+* * Status codes:
+
+# Session initialisation
+* End point: /session
+* * Method: POST
+* * Request MIME: application/json
+* * Request JSON type: Y
+*  Authentication required: no
 * * Status codes:
 
 # A specific recipe
@@ -19,6 +28,7 @@
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Response JSON type: X
+* * Authentication required: no
 * * Status codes:  
 
 * End point: /recipe/*ID*
@@ -26,12 +36,14 @@
 * * Request MIME: application/x-www-form-urlencoded
 * * Request data: (See description below)
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 * End point: /recipe/*ID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:  
 
 # A specific recipe's title
@@ -40,18 +52,21 @@
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: text/plain
+* * Authentication required: no
 * * Status codes:  
 
 * End point: /recipe/*ID*/title
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:  
 
 * End point: /recipe/*ID*/title
 * * Method: PUT
 * * Request MIME: text/plain
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 # A specific recipe's ingredients
@@ -61,12 +76,14 @@
 * * Request MIME: (none)
 * * Response MIME: application/json
 * * Response JSON type: B
+* * Authentication required: no
 * * Status codes:  
 
 * End point: /recipe/*ID*/ingredients
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:  
 
 * End point: /recipe/*ID*/ingredients
@@ -74,6 +91,7 @@
 * * Request MIME: application/json
 * * Response JSON type: C
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 # A specific recipe's preparation
@@ -82,18 +100,21 @@
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: text/plain
+* * Authentication required: no
 * * Status codes:  
 
 * End point: /recipe/*ID*/preparation
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:  
 
 * End point: /recipe/*ID*/preparation
 * * Method: PUT
 * * Request MIME: text/plain
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 # A specific recipe's categories
@@ -103,18 +124,21 @@
 * * Request MIME: (none)
 * * Response MIME: application/json
 * * Response JSON type: D
+* * Authentication required: no
 * * Status codes:  
 
 * End point: /recipe/*ID*/categories/*CID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:  
 
 * End point: /recipe/*ID*/categories/*CID*
 * * Method: PUT
 * * Request MIME: text/plain
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 # A specific recipe's additions
@@ -124,31 +148,36 @@
 * * Request MIME: (none)
 * * Response MIME: application/json
 * * Response JSON type: E
+* * Authentication required: no
 * * Status codes: 
 
 * End point: /recipe/*ID*/addition/*AID*
 * * Method: GET
 * * Request MIME: (none)
 * * Response MIME: application/json
-* * * Response JSON type: F
+* *  Response JSON type: F
+* * Authentication required: no
 * * Status codes:  
 
 * End point: /recipe/*ID*/addition/*AID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:  
 
 * End point: /recipe/*ID*/addition/*AID*/owner
 * * Method: PUT
 * * Request MIME: text/plain
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 * End point: /recipe/*ID*/addition/*AID*/state
 * * Method: PUT
 * * Request MIME: text/plain
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 * End point: /recipe/*ID*/addition/*AID*/
@@ -156,6 +185,7 @@
 * * Request MIME: application/json
 * * Request JSON type: H
 * * Response MIME: (none)
+* * Authentication required: yes
 * * Status codes:
 
 # JSON
@@ -229,6 +259,12 @@ This type is identical to type H.
     "id": (number),
     "creator": (string),
     "created": (string, date and time),
+}
+
+## Type Y
+{
+    "user": (string),
+    "password": (string)
 }
 
 # Values for the end point /recipe/*ID*/addition/*AID*/state
