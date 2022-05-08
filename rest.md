@@ -240,7 +240,12 @@ Here are the JSON types mentions above. In the round brackets there are the resp
 ## Type A
 
 {
-    "recipes" : [(number)]
+    "recipes" : [
+        {
+            "id": (number),
+            "title" : (string)
+        }
+    ]
 }
 
 ## Type B
