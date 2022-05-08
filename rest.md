@@ -1,8 +1,5 @@
 # Status codes applicable to all endpoints
-* 200 OK
 * 400 Bad Request
-* 403 Forbidden – Applicable to all end points requiring autorisation
-* 404 Not Found
 * 500 Internal Server Error
 
 # Endpoints
@@ -16,6 +13,8 @@
 * * Response JSON type: A
 * * Authentication required: no
 * * Status codes:
+* * * 200 OK
+* * * 404 Not Found
 
 # Session initialisation
 * End point: /session
@@ -24,6 +23,8 @@
 * * Request JSON type: Y
 *  Authentication required: no
 * * Status codes:
+* * * 201 Created – if successful
+* * * 403 Forbidden – if not successful
 
 # A specific recipe
 
@@ -33,7 +34,9 @@
 * * Response MIME: (none)
 * * Response JSON type: X
 * * Authentication required: no
-* * Status codes:  
+* * Status codes:
+* * * 200 OK
+* * * 404 Not Found
 
 * End point: /recipe/_create
 * * Method: POST
@@ -42,13 +45,17 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 201 Created
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Authentication required: yes
-* * Status codes:  
+* * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 # A specific recipe's title
 
@@ -57,14 +64,18 @@
 * * Request MIME: (none)
 * * Response MIME: text/plain
 * * Authentication required: no
-* * Status codes:  
+* * Status codes:
+* * * 200 OK
+* * * 404 Not Found
 
 * End point: /recipe/*ID*/title
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Authentication required: yes
-* * Status codes:  
+* * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*/title
 * * Method: PUT
@@ -72,6 +83,8 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 # A specific recipe's ingredients
 
@@ -81,14 +94,18 @@
 * * Response MIME: application/json
 * * Response JSON type: B
 * * Authentication required: no
-* * Status codes:  
+* * Status codes:
+* * * 200 OK
+* * * 404 Not Found
 
 * End point: /recipe/*ID*/ingredients
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Authentication required: yes
-* * Status codes:  
+* * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*/ingredients
 * * Method: PUT
@@ -97,6 +114,8 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 # A specific recipe's preparation
 
@@ -105,14 +124,18 @@
 * * Request MIME: (none)
 * * Response MIME: text/plain
 * * Authentication required: no
-* * Status codes:  
+* * Status codes:
+* * * 200 OK
+* * * 404 Not Found
 
 * End point: /recipe/*ID*/preparation
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Authentication required: yes
-* * Status codes:  
+* * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*/preparation
 * * Method: PUT
@@ -120,6 +143,8 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 # A specific recipe's categories
 
@@ -129,14 +154,18 @@
 * * Response MIME: application/json
 * * Response JSON type: D
 * * Authentication required: no
-* * Status codes:  
+* * Status codes:
+* * * 200 OK
+* * * 404 Not Found
 
 * End point: /recipe/*ID*/categories/*CID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Authentication required: yes
-* * Status codes:  
+* * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*/categories/*CID*
 * * Method: PUT
@@ -144,6 +173,8 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 # A specific recipe's additions
 
@@ -153,7 +184,9 @@
 * * Response MIME: application/json
 * * Response JSON type: E
 * * Authentication required: no
-* * Status codes: 
+* * Status codes:
+* * * 200 OK
+* * * 404 Not Found
 
 * End point: /recipe/*ID*/addition/*AID*
 * * Method: GET
@@ -161,14 +194,16 @@
 * * Response MIME: application/json
 * *  Response JSON type: F
 * * Authentication required: no
-* * Status codes:  
+* * Status codes:
 
 * End point: /recipe/*ID*/addition/*AID*
 * * Method: DELETE
 * * Request MIME: (none)
 * * Response MIME: (none)
 * * Authentication required: yes
-* * Status codes:  
+* * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*/addition/*AID*/owner
 * * Method: PUT
@@ -176,6 +211,8 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*/addition/*AID*/state
 * * Method: PUT
@@ -183,6 +220,8 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 * End point: /recipe/*ID*/addition/*AID*/
 * * Method: PUT
@@ -191,6 +230,8 @@
 * * Response MIME: (none)
 * * Authentication required: yes
 * * Status codes:
+* * * 204 No Content – If successul
+* * * 403 Forbidden
 
 # JSON
 
