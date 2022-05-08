@@ -31,9 +31,9 @@
 * * Authentication required: no
 * * Status codes:  
 
-* End point: /recipe/*ID*
+* End point: /recipe/_create
 * * Method: POST
-* * Request MIME: application/x-www-form-urlencoded
+* * Request MIME: text/plain
 * * Request data: (See description below)
 * * Response MIME: (none)
 * * Authentication required: yes
