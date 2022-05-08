@@ -1,5 +1,9 @@
 # Status codes applicable to all endpoints
-
+* 200 OK
+* 400 Bad Request
+* 403 Forbidden – Applicable to all end points requiring autorisation
+* 404 Not Found
+* 500 Internal Server Error
 
 # Endpoints
 
